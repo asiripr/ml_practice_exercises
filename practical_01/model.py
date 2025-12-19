@@ -16,6 +16,7 @@ model = LinearRegression()
 model.fit(X, y)
 
 # make a prediction for new house
-new_house = [[2200]]
+new_house = pd.DataFrame({'Size': [2200]})
 prediction = model.predict(new_house)
+
 print(f"Predicted price for a 2,200 sq ft house: ${prediction[0]:,.2f}")
